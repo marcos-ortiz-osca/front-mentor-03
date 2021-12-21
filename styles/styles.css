@@ -1,0 +1,119 @@
+:root {
+    --Dark-cyan                 : hsl(185, 75%, 39%);
+    --Very-dark-desaturated-blue: hsl(229, 23%, 23%);
+    --Dark-grayish-blue         : hsl(227, 10%, 46%);
+    --Dark-gray                 : hsl(0, 0%, 59%);
+    --Dark-gray-2               : hsl(0, 1%, 69%);
+}
+
+
+html {
+    box-sizing : border-box;
+    font-family: 'Kumbh Sans', sans-serif;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+body{
+    background-color: var(--Dark-cyan);
+}
+
+.main-container{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url("../images/bg-pattern-top.svg") left 100% top 200% no-repeat,
+                url("../images/bg-pattern-top.svg") right 100% bottom 200% no-repeat;                
+                
+}
+
+@media (min-width: 700px) {
+    .main-container{
+    background: url("../images/bg-pattern-top.svg") left -70% top 200% no-repeat,
+                url("../images/bg-pattern-top.svg") right -70% bottom 200% no-repeat;  
+    }
+}  
+
+.card-container{
+    width: 300px;
+    height: 400px;
+    border-radius: 1em;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+.one{
+    background-image: url('../images/bg-pattern-card.svg');
+    background-color: var(--Dark-cyan);
+    background-blend-mode: overlay;
+    border-radius: 1em 1em 0 0;
+    height: 150px;
+    width: 100%;
+}
+.two{
+    background-color: white;
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-bottom: 1px solid var(--Dark-gray-2);
+
+    
+}
+.two h2{
+    font-size: 18px;
+    margin-top: 3em;
+    margin-bottom: 0;
+    text-align: center;
+    font-weight: 700;
+   
+}
+.two  .age{
+    color: var(--Dark-grayish-blue);
+    font-weight: 400;
+}
+.two .city{
+    color: var(--Dark-grayish-blue);
+    text-align: center;
+    font-size: .9em;
+}
+
+.three{
+    background-color: white;
+    height: 100px;
+    border-radius: 0 0 1em 1em;
+    display: flex;
+   justify-content: space-around;
+    align-items: center;
+}
+.item h2{
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 0;
+    text-align: center;
+}
+.item p{
+    margin-top: 0.5em;
+    font-size: .6em;
+    color: var(--Dark-grayish-blue);
+    letter-spacing: .2em;
+    text-align: center;
+}
+.img{
+    position: absolute;
+    height: 100px;
+    width: 100px;
+    top: 100px;
+    left: 100px;
+    z-index: 100;
+    border-radius: 50%;
+    border: 3px solid white;
+    background-image: url('../images/image-victor.jpg');
+    background-repeat: no-repeat;
+}
